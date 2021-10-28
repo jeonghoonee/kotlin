@@ -8,7 +8,6 @@ package org.jetbrains.kotlin.analysis.api.fir.scopes;
 import com.intellij.testFramework.TestDataPath;
 import org.jetbrains.kotlin.test.util.KtTestUtil;
 import org.jetbrains.kotlin.test.TestMetadata;
-import org.junit.jupiter.api.Nested;
 import org.junit.jupiter.api.Test;
 
 import java.io.File;
@@ -22,6 +21,36 @@ public class FirMemberScopeByFqNameTestGenerated extends AbstractFirMemberScopeB
     @Test
     public void testAllFilesPresentInMemberScopeByFqName() throws Exception {
         KtTestUtil.assertAllTestsPresentByMetadataWithExcluded(this.getClass(), new File("analysis/analysis-api/testData/scopes/memberScopeByFqName"), Pattern.compile("^(.+)\\.kt$"), null, true);
+    }
+
+    @Test
+    @TestMetadata("ClassWithGenericBase1.kt")
+    public void testClassWithGenericBase1() throws Exception {
+        runTest("analysis/analysis-api/testData/scopes/memberScopeByFqName/ClassWithGenericBase1.kt");
+    }
+
+    @Test
+    @TestMetadata("ClassWithGenericBase2.kt")
+    public void testClassWithGenericBase2() throws Exception {
+        runTest("analysis/analysis-api/testData/scopes/memberScopeByFqName/ClassWithGenericBase2.kt");
+    }
+
+    @Test
+    @TestMetadata("ClassWithGenericBase3.kt")
+    public void testClassWithGenericBase3() throws Exception {
+        runTest("analysis/analysis-api/testData/scopes/memberScopeByFqName/ClassWithGenericBase3.kt");
+    }
+
+    @Test
+    @TestMetadata("ClassWithGenericBase4.kt")
+    public void testClassWithGenericBase4() throws Exception {
+        runTest("analysis/analysis-api/testData/scopes/memberScopeByFqName/ClassWithGenericBase4.kt");
+    }
+
+    @Test
+    @TestMetadata("Implement_java_util_Collection.kt")
+    public void testImplement_java_util_Collection() throws Exception {
+        runTest("analysis/analysis-api/testData/scopes/memberScopeByFqName/Implement_java_util_Collection.kt");
     }
 
     @Test
