@@ -39,7 +39,6 @@ import org.jetbrains.kotlin.types.*
 import org.jetbrains.kotlin.types.checker.NewCapturedType
 import org.jetbrains.kotlin.types.checker.NewTypeVariableConstructor
 import org.jetbrains.kotlin.types.typeUtil.isNothing
-import org.jetbrains.kotlin.types.typeUtil.supertypes
 import org.jetbrains.kotlin.util.containingNonLocalDeclaration
 
 internal class KtFe10TypeProvider(
